@@ -155,8 +155,19 @@ body {
     left: calc(50% - 5px);
     top: calc(50% - 2px);
     position: absolute;
+    -webkit-animation: bullet 10s ease-in-out infinite;
     animation: bullet 10s ease-in-out infinite;
 }
+
+@-webkit-keyframes bullet {
+    
+    0% {
+        -webkit-transform: translate(0,0) rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: translate(-45000px,-33000px) rotate(25deg);
+    }
 
 @keyframes bullet {
     
