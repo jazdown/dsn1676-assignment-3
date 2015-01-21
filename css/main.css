@@ -17,6 +17,12 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .angry-asteroid {
     position: absolute;
     width: 150px;
@@ -30,11 +36,11 @@ html {
 @-webkit-keyframes angry-asteroid-rotate {
     
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     } 
     
     100% {
-        transform: rotate(360deg)
+        -webkit-transform: rotate(360deg)
     }
 
 }
@@ -64,23 +70,23 @@ html {
 @-webkit-keyframes ship-moving {
     
     0% {
-        transform: translate(0,0) rotate(0deg);
+        -webkit-transform: translate(0,0) rotate(0deg);
     }
     
     10% {
-        transform: translate(40px,50px) rotate(25deg);
+        -webkit-transform: translate(40px,50px) rotate(25deg);
     }
     
     60% {
-        transform: translate(100px,100px) rotate(27deg);
+        -webkit-transform: translate(100px,100px) rotate(27deg);
     }
     
     80% {
-        transform: translate(-400px,-60px) rotate(140deg);
+        -webkit-transform: translate(-400px,-60px) rotate(140deg);
     }
     
     100% {
-        transform: translate(400px, 200px) rotate(750deg);
+        -webkit-transform: translate(400px, 200px) rotate(750deg);
     }
     
 }
@@ -123,11 +129,11 @@ html {
 @-webkit-keyframes star-zoom {
     
     0% {
-        transform: scale(1,1);
+        -webkit-transform: scale(1,1);
     }
     
     100% {
-        transform: scale(1.2,1.2);
+        -webkit-transform: scale(1.2,1.2);
     }
 }
 
@@ -140,4 +146,26 @@ html {
     100% {
         transform: scale(1.2,1.2);
     }
+}
+
+.bullet {
+    background-color: #93FF15;
+    height: 4px;
+    width: 10px;
+    left: calc(50% - 5px);
+    top: calc(50% - 2px);
+    position: absolute;
+    animation: bullet 10s ease-in-out infinite;
+}
+
+@keyframes bullet {
+    
+    0% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    
+    100% {
+        transform: translate(-45000px,-33000px) rotate(25deg);
+    }
+    
 }
