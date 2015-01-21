@@ -168,6 +168,7 @@ body {
     100% {
         -webkit-transform: translate(-45000px,-33000px) rotate(25deg);
     }
+}
 
 @keyframes bullet {
     
